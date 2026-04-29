@@ -46,7 +46,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "OIL EMPIRE",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "WE THE BEST MUSIC",
+   LoadingTitle = "",
    LoadingSubtitle = "by _zqyr",
    ShowText = "Rayfield", -- for mobile users to unhide Rayfield, change if you'd like
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -70,29 +70,15 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the Discord every time they load it up
    },
 
-    KeySystem = true, -- Imposta a true per attivare il sistema
-    KeySettings = {
-      Title = "Sistema di Chiavi",
-      Subtitle = "Ottieni la chiave su LootLabs",
-      Note = "Il link verrà copiato negli appunti premendo il tasto sotto",
-      FileName = "zqyr_key", 
-      SaveKey = true, -- Salva la chiave così non devono rifarlo ogni volta
-      GrabKeyFromSite = false, -- Se la chiave è statica o gestita manualmente
-      Key = {"CHIAVE_QUI"}, -- Inserisci qui la chiave corretta o usa un sistema dinamico
-      Actions = {
-            [1] = {
-                Text = "Copia Link Chiave (LootLabs)",
-                OnPress = function()
-                    setclipboard("https://loot-link.com/s?YaOhq7yL")
-                    Rayfield:Notify({
-                        Title = "Link Copiato!",
-                        Content = "Il link è stato copiato negli appunti. Incollalo nel browser.",
-                        Duration = 5,
-                        Image = 4483362458,
-                    })
-                end,
-            }
-        }
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique, as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that the system will accept, can be RAW file links (pastebin, github, etc.) or simple strings ("hello", "key22")
    }
 })
 
