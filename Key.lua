@@ -20,7 +20,7 @@ local Config = {
     PlatoSecret     = "812461b0-c84d-4073-bb7a-46f5e4aaf452", -- Your PlatoBoost Secret Key
 
     -- [2] Anti-Bypass / Global Secret Variable
-    Secret          = "19451945", -- This makes the script ONLY run from the key script. Even if they copy the original obfuscated script to bypass the key, they won't be able to!
+    Secret          = "Test", -- This makes the script ONLY run from the key script. Even if they copy the original obfuscated script to bypass the key, they won't be able to!
     
     -- [3] Scripts & Links
     MainScriptURL   = "https://raw.githubusercontent.com/dxvidssss/keysystem/refs/heads/main/script.lua", -- The raw URL of your main script
